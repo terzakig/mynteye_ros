@@ -47,7 +47,7 @@
   <group ns="$(arg mynteye)">
 
     <!-- mynteye_wrapper_node -->
-    <node name="mynteye_wrapper_node" pkg="mynt_eye_ros_wrapper" type="mynteye_wrapper_node" output="screen" respawn="true" respawn_delay="10">
+    <node name="mynteye_wrapper_node" pkg="mynteye_ros" type="mynteye_wrapper_node" output="screen" respawn="true" respawn_delay="10">
 
       <!-- node params -->
 
@@ -83,10 +83,10 @@
 
       <param name="temperature_frame_id" value="$(arg temperature_frame_id)" />
 
-      <rosparam file="$(find mynt_eye_ros_wrapper)/config/device/standard.yaml" command="load" />
-      <rosparam file="$(find mynt_eye_ros_wrapper)/config/device/standard2.yaml" command="load" />
-      <rosparam file="$(find mynt_eye_ros_wrapper)/config/process/process_config.yaml" command="load" />
-      <rosparam file="$(find mynt_eye_ros_wrapper)/config/mesh/mesh.yaml" command="load" />
+      <rosparam file="$(find mynteye_ros)/config/device/standard.yaml" command="load" />
+      <rosparam file="$(find mynteye_ros)/config/device/standard2.yaml" command="load" />
+      <rosparam file="$(find mynteye_ros)/config/process/process_config.yaml" command="load" />
+      <rosparam file="$(find mynteye_ros)/config/mesh/mesh.yaml" command="load" />
 
       <param name="gravity" value="$(arg gravity)" />
       <!-- <param name="ros_output_framerate_cut"     value="2" /> -->
